@@ -29,7 +29,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
         }
         else {
             //setting session time out (seconds) = 3600 = 1 hour
-            session.setMaxInactiveInterval(10);
+            session.setMaxInactiveInterval(3600);
             return true;
         }
     }

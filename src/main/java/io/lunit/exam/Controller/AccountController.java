@@ -38,7 +38,7 @@ public class AccountController {
 
             logger.info(newLoginAccount.toString());
 
-            //Login 성공
+            //Login
             if(newLoginAccount.getId() != null && newLoginAccount.getPassword().equals(account.getPassword())) {
 
                 logger.info("Valid new Account!! Before session's 'loginUser' = " + (Account)session.getAttribute("loginUser"));
