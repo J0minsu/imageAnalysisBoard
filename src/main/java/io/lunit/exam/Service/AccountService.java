@@ -1,4 +1,8 @@
 package io.lunit.exam.Service;
 
-public class AccountService {
+import io.lunit.exam.Domain.Account;
+
+public interface AccountService {
+
+    Account login(Account account);
 }

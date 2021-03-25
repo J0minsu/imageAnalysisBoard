@@ -13,21 +13,23 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Component
-public class AccountInterceptor implements HandlerInterceptor {
+public class AuthenticationInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
+        //logger.info("Interceptor is running")
+
         HttpSession session = request.getSession();
         Account loginUser = (Account) session.getAttribute("loginUser");
 
-        if(ObjectUtils.isEmpty(loginUser)) {
+        if(loginUser == null) {
             response.sendError(404, "Invalid Login Info");
             return false;
         }
         else {
             //setting session time out (seconds) = 3600 = 1 hour
-            session.setMaxInactiveInterval(60 * 60);
+            session.setMaxInactiveInterval(10);
             return true;
         }
     }
