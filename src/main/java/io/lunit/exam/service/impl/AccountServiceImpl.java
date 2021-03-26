@@ -10,7 +10,7 @@ public class AccountServiceImpl implements AccountService {
 
 
     @Autowired
-    AccountRepository repository;
+    private AccountRepository repository;
 
     @Override
     public Account login(Account account) {
@@ -18,6 +18,7 @@ public class AccountServiceImpl implements AccountService {
         //신규 접근하는 계정의 PW 와 DB에 저장된 PW 비교 ( NOT NULL 옵션이기 때문에, PW 공백이슈 X )
         //ID 일치하는 계정이 있다면 정상적인 동작, 일치하는 계정정보 없다면 Empty bean
         Account newLoginAccount = repository.findById(account.getId()).orElse(new Account());
+
 
         return newLoginAccount;
     }
