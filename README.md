@@ -44,5 +44,3 @@ IDE : InteliJ
  11. localhost:8080/api/histories/ + [one history's id you want to see ]
  
  
- 13. 
- 
