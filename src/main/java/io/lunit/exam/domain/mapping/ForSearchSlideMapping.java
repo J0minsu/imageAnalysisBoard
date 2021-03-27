@@ -1,7 +1,7 @@
 package io.lunit.exam.domain.mapping;
 
 
-public interface SlideIdAndFileNameMapping {
+public interface ForSearchSlideMapping {
     int getId();
     String getFileName();
 }

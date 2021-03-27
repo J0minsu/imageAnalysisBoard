@@ -1,12 +1,10 @@
-package io.lunit.exam.Interceptor;
+package io.lunit.exam.interceptor;
 
 
-import io.lunit.exam.Domain.Account;
+import io.lunit.exam.domain.Account;
 import org.springframework.stereotype.Component;
-import org.springframework.util.ObjectUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,7 +16,6 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        //logger.info("Interceptor is running")
 
         HttpSession session = request.getSession();
         Account loginUser = (Account) session.getAttribute("loginUser");

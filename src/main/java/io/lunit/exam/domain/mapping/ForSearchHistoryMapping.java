@@ -1,4 +1,9 @@
 package io.lunit.exam.domain.mapping;
 
-public class ForSearchHistoryMapping {
+import io.lunit.exam.domain.Slide;
+
+public interface ForSearchHistoryMapping {
+    int getId();
+    Boolean getIsSuccess();
+    Slide getSlide();
 }

@@ -1,16 +1,39 @@
 package io.lunit.exam.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
+
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Analysis {
 
+    @JsonProperty(value = "errorMessage")
     private String errorMessage;
 
-    private Boolean Dicision;
+    @JsonProperty(value = "Decision")
+    private Boolean Decision;
 
+    @JsonProperty(value = "SCOPE")
     private Float SCOPE;
 
+    @JsonProperty(value = "Cutoff")
     private Float Cutoff;
 
-    List<Grid> grids;
+    @JsonProperty(value = "Grids")
+    private List<Grid> Grids;
+
+    public void addGird(Grid grid) {
+        if(Grids == null)
+            Grids = new ArrayList<>();
+
+        Grids.add(grid);
+    }
+
 }

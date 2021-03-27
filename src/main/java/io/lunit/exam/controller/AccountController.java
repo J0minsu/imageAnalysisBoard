@@ -1,13 +1,13 @@
-package io.lunit.exam.Controller;
+package io.lunit.exam.controller;
 
 
-import io.lunit.exam.Domain.Account;
-import io.lunit.exam.Service.AccountService;
+import io.lunit.exam.domain.Account;
+import io.lunit.exam.service.AccountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +19,10 @@ public class AccountController {
 
     @Autowired
     private AccountService accountService;
+
+    //BCtypt
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -36,14 +40,14 @@ public class AccountController {
             //ID로 조회 된다면 해당 data, 아니면 NoArgConst
             Account newLoginAccount = accountService.login(account);
 
-            logger.info(newLoginAccount.toString());
+            logger.info("Newly want to login info " + newLoginAccount.toString());
 
             //Login
-            if(newLoginAccount.getId() != null && newLoginAccount.getPassword().equals(account.getPassword())) {
+            if(newLoginAccount.getId() != null && passwordEncoder.matches(account.getPassword(), newLoginAccount.getPassword())) {
 
-                logger.info("Valid new Account!! Before session's 'loginUser' = " + (Account)session.getAttribute("loginUser"));
+                logger.info("Valid account!! Before session's 'loginUser' = " + (Account)session.getAttribute("loginUser"));
 
-                //기존에 로그인 정보 있는 경우, 기존 Attribute 삭제
+                //기존에 로그인 정보 삭제
                 if(session.getAttribute("loginUser") != null)
                     session.removeAttribute("loginUser");
 
@@ -51,13 +55,13 @@ public class AccountController {
                 session.setAttribute("loginUser", account);
 
                 logger.info("after refresh, login info = " + (Account)session.getAttribute("loginUser"));
-
-
-                return new ResponseEntity(SUCCESS_LOGIN, HttpStatus.OK);
+                return ResponseEntity.ok().body(SUCCESS_LOGIN);
             }
         }
 
-            return new ResponseEntity(INVALID_ERROR, HttpStatus.NOT_ACCEPTABLE);
+        logger.debug("Failure login");
+
+            return ResponseEntity.badRequest().body(INVALID_ERROR);
 
     }
 }

@@ -10,18 +10,13 @@
 <hr>
 <hr>
 
-<h3>Slide Upload</h3>
+<h3> Downloadable All Slide </h3>
 
-<form method="POST" action="/api/slides" enctype="multipart/form-data">
-    <input type="file" name="file" /><br />
-    <br /> <input type="submit" value="Submit" />
-</form>
-
-<hr><hr>
 
 <h3>List of your slides</h3>
 <c:forEach var="slide" items="${slides}">
 
-    <a href="/api/slides" >조회 가능한 모든 슬라이드</a>
+    <a href="/api/slides/download/${slide.id}" >${slide.fileName} << 다운로드 </a>
+    <br>
 
 </c:forEach>

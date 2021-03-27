@@ -1,7 +1,10 @@
-package io.lunit.exam.Service;
+package io.lunit.exam.service.impl;
 
-import io.lunit.exam.Domain.Account;
-import io.lunit.exam.Repository.AccountRepository;
+import io.lunit.exam.domain.Account;
+import io.lunit.exam.repository.AccountRepository;
+import io.lunit.exam.service.AccountService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +14,8 @@ public class AccountServiceImpl implements AccountService {
 
     @Autowired
     private AccountRepository repository;
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     public Account login(Account account) {

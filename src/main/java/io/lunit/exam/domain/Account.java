@@ -1,13 +1,12 @@
-package io.lunit.exam.Domain;
+package io.lunit.exam.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table
@@ -22,7 +21,13 @@ public class Account {
     @Column(length = 16)
     private String id;
 
-    @Column(length = 16, nullable = false)
+    @Column(length = 60, nullable = false)
     @NotNull
     private String password;
+
+
+    public void securitySet() {
+        this.password = "";
+    }
+
 }

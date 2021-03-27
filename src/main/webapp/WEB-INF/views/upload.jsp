@@ -16,12 +16,3 @@
     <input type="file" name="file" /><br />
     <br /> <input type="submit" value="Submit" />
 </form>
-
-<hr><hr>
-
-<h3>List of your slides</h3>
-<c:forEach var="slide" items="${slides}">
-
-    <a href="/api/slides" >조회 가능한 모든 슬라이드</a>
-
-</c:forEach>

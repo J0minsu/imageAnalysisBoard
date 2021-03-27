@@ -1,6 +1,6 @@
-package io.lunit.exam.Service;
+package io.lunit.exam.service;
 
-import io.lunit.exam.Domain.Account;
+import io.lunit.exam.domain.Account;
 
 public interface AccountService {
 
