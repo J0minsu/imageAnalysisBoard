@@ -1,14 +1,12 @@
 package io.lunit.exam.controller;
 
 import io.lunit.exam.domain.Account;
-import io.lunit.exam.domain.Slide;
 import io.lunit.exam.domain.mapping.ForSearchSlideMapping;
 import io.lunit.exam.repository.AccountRepository;
 import io.lunit.exam.repository.SlideRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,7 +32,7 @@ public class Home {
 
         logger.info("Success Login & Go to home");
 
-        Account account = accountRepository.findById("jslee").orElse(new Account());
+        Account account = accountRepository.findById("msjo").orElse(new Account());
 
         //for slide up/download test
         session.setAttribute("loginUser", account);
@@ -80,6 +78,26 @@ public class Home {
 
         ModelAndView view = new ModelAndView();
         view.setViewName("/search");
+
+        return view;
+    }
+
+    @GetMapping("otherLogin")
+    public ModelAndView changeLogin(HttpSession session) {
+
+        logger.info("change user msjo -> jslee");
+
+        Account account = accountRepository.findById("jslee").orElse(new Account());
+
+
+        //기존 로그인 정보 폐기
+        session.removeAttribute("loginUser");
+
+        //New 로그인 정보 주입
+        session.setAttribute("loginUser", account);
+
+        ModelAndView view = new ModelAndView();
+        view.setViewName("/home");
 
         return view;
     }
