@@ -1,7 +1,7 @@
 # Lunit_Test
 
 ##  Program Structure
-![structure](https://github.com/J0minsu/Lunit_Test/tree/master/images/structure.png)
+![structure](https://github.com/J0minsu/Lunit_Test/blob/master/images/structure.png?raw=true)
 
 ### Technology set
 |TechNical Name|Value|
