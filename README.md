@@ -24,7 +24,3 @@
  - 'javax.servlet:jstl:1.2'
 
 
-### Essential requirements
-
- - complete ( 1, 2, 3, 4, 5 )
- - incomplete ( 6 )
