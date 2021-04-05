@@ -1,4 +1,4 @@
-# Lunit_Test
+# Image Analysis Board
 
 ##  Program Structure
 ![structure](https://github.com/J0minsu/Lunit_Test/blob/master/images/structure.png?raw=true)
