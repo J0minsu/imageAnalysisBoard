@@ -3,7 +3,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 
-<title>Lunit_EXAM</title>
+<title>Simple page</title>
 
 <h2>SIMPLE PAGE FOR TEST</h2>
 
