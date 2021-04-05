@@ -77,7 +77,6 @@ public class SlideController {
 
         try {
             InputStream imageStram = new FileInputStream(FILE_PATH + slide.getFileName());
-
                                     //convert InputStram to byte Array
             byte [] imageByteArray = imageStram.readAllBytes();
 
@@ -85,7 +84,6 @@ public class SlideController {
             //정상적으로 반환
             return ResponseEntity.ok().body(imageByteArray);
         }
-
         catch (IOException e) {
             return ResponseEntity.badRequest().body(null);
         }
@@ -139,18 +137,16 @@ public class SlideController {
 
             Account account = (Account) session.getAttribute("loginUser");
 
-            Slide slide = new Slide(file.getOriginalFilename(),path.toString(), account);
+            Slide slide = new Slide(file.getOriginalFilename(), path.toString(), account);
 
             result = service.save(slide);
 
             if(!result.equals("Success slide upload!"))
                 return ResponseEntity.unprocessableEntity().body(result);
 
-
         } catch (IOException e ) {
 
         }
-
         return ResponseEntity.ok().body(result);
     }
 }

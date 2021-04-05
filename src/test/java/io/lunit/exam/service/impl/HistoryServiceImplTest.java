@@ -19,28 +19,13 @@ class HistoryServiceImplTest {
     void analysisSlide() throws JsonProcessingException {
 
 
-        String text = "{\n" +
-                "      \"id\" : \"msjo\",\n" +
-                "  \"number\" : 0.3," +
-                "\"Decision\" : true" +
-                "}";
-
-
-        System.out.println(text);
+        String text = "";
 
         ObjectMapper mapper = new ObjectMapper();
 
-        Account account = mapper.readValue(text, Account.class);
-
-        System.out.println(account.toString());
-
-        System.out.println();
-        System.out.println();
-        System.out.println();
-
         text = "{\n" +
                 "    \"errorMessage\" : \"~~~~~\",\n" +
-                "    \"Decision\" : 1,\n" +
+                "    \"Decision\" : true,\n" +
                 "    \"SCOPE\" : 0.3,\n" +
                 "    \"Cutoff\" : 0.5,\n" +
                 "    \"Grids\" : [\n" +

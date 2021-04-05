@@ -15,10 +15,10 @@ public interface SlideRepository extends JpaRepository<Slide, Integer> {
     //file id and fileName 만 가져오기
     Optional<ForSearchSlideMapping> findIdAndFileNameByFileName(String fileName);
 
-    //files id and fileName 만 가져오기
+    //자신 소유의 files id and fileName 만 가져오기
     ArrayList<ForSearchSlideMapping> findIdAndFileNameByAccountId(String accountId);
 
-    //file name 겸색해서 자신소유의 files id and fileName
+    //자신 소유의 Slide 중, file name 겸색해서 id fileName 가져오기
     ArrayList<ForSearchSlideMapping> findIdAndFileNameByAccountIdAndFileNameContaining(String accountId, String search);
 
     //account, id 일치하는 file download
