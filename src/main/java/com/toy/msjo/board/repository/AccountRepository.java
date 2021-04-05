@@ -1,6 +1,6 @@
-package io.lunit.exam.repository;
+package com.toy.msjo.board.repository;
 
-import io.lunit.exam.domain.Account;
+import com.toy.msjo.board.domain.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AccountRepository extends JpaRepository<Account, String> {

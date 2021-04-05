@@ -1,6 +1,6 @@
-package io.lunit.exam.service;
+package com.toy.msjo.board.service;
 
-import io.lunit.exam.domain.Account;
+import com.toy.msjo.board.domain.Account;
 
 public interface AccountService {
 

@@ -1,32 +1,21 @@
-package io.lunit.exam.service.impl;
+package com.toy.msjo.board.service.impl;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.lunit.exam.domain.Account;
-import io.lunit.exam.domain.History;
-import io.lunit.exam.domain.Slide;
-import io.lunit.exam.domain.mapping.ForSearchHistoryMapping;
-import io.lunit.exam.dto.Analysis;
-import io.lunit.exam.dto.Grid;
-import io.lunit.exam.repository.AccountRepository;
-import io.lunit.exam.repository.HistoryRepository;
-import io.lunit.exam.repository.SlideRepository;
-import io.lunit.exam.service.HistoryService;
-import org.apache.tomcat.util.json.JSONParser;
+import com.toy.msjo.board.repository.AccountRepository;
+import com.toy.msjo.board.repository.SlideRepository;
+import com.toy.msjo.board.service.HistoryService;
+import com.toy.msjo.board.domain.Account;
+import com.toy.msjo.board.domain.History;
+import com.toy.msjo.board.domain.Slide;
+import com.toy.msjo.board.domain.mapping.ForSearchHistoryMapping;
+import com.toy.msjo.board.dto.Analysis;
+import com.toy.msjo.board.dto.Grid;
+import com.toy.msjo.board.repository.HistoryRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.client.RestTemplate;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 

@@ -1,6 +1,6 @@
-package io.lunit.exam.config;
+package com.toy.msjo.board.config;
 
-import io.lunit.exam.interceptor.AuthenticationInterceptor;
+import com.toy.msjo.board.interceptor.AuthenticationInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

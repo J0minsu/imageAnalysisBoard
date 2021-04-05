@@ -1,6 +1,6 @@
-package io.lunit.exam.domain;
+package com.toy.msjo.board.domain;
 
-import io.lunit.exam.repository.AccountRepository;
+import com.toy.msjo.board.repository.AccountRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

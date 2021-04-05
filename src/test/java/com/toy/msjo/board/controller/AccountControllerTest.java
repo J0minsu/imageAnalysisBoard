@@ -1,4 +1,4 @@
-package io.lunit.exam.controller;
+package com.toy.msjo.board.controller;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;

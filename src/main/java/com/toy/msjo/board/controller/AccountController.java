@@ -1,14 +1,13 @@
-package io.lunit.exam.controller;
+package com.toy.msjo.board.controller;
 
 
-import io.lunit.exam.domain.Account;
-import io.lunit.exam.service.AccountService;
+import com.toy.msjo.board.domain.Account;
+import com.toy.msjo.board.service.AccountService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +20,7 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    //BCtypt
+    //BCtyptcom.toy.msjo
     @Autowired
     private PasswordEncoder passwordEncoder;
 

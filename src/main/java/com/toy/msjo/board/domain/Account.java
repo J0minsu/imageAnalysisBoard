@@ -1,4 +1,4 @@
-package io.lunit.exam.domain;
+package com.toy.msjo.board.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

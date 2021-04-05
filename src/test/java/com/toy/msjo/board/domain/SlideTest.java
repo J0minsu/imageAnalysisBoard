@@ -1,7 +1,6 @@
-package io.lunit.exam.domain;
+package com.toy.msjo.board.domain;
 
-import io.lunit.exam.service.impl.AccountServiceImpl;
-import io.lunit.exam.service.impl.SlideServiceImpl;
+import com.toy.msjo.board.service.impl.SlideServiceImpl;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

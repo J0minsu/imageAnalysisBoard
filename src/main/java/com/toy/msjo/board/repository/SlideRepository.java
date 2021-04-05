@@ -1,7 +1,7 @@
-package io.lunit.exam.repository;
+package com.toy.msjo.board.repository;
 
-import io.lunit.exam.domain.Slide;
-import io.lunit.exam.domain.mapping.ForSearchSlideMapping;
+import com.toy.msjo.board.domain.Slide;
+import com.toy.msjo.board.domain.mapping.ForSearchSlideMapping;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;

@@ -1,15 +1,13 @@
-package io.lunit.exam.controller;
+package com.toy.msjo.board.controller;
 
 
-import io.lunit.exam.domain.Account;
-import io.lunit.exam.domain.History;
-import io.lunit.exam.domain.mapping.ForSearchHistoryMapping;
-import io.lunit.exam.service.HistoryService;
-import io.lunit.exam.service.SlideService;
+import com.toy.msjo.board.service.HistoryService;
+import com.toy.msjo.board.domain.Account;
+import com.toy.msjo.board.domain.History;
+import com.toy.msjo.board.domain.mapping.ForSearchHistoryMapping;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

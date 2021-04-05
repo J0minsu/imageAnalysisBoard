@@ -1,4 +1,4 @@
-package io.lunit.exam.domain.mapping;
+package com.toy.msjo.board.domain.mapping;
 
 
 public interface ForSearchSlideMapping {

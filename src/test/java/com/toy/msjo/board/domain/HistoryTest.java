@@ -1,19 +1,15 @@
-package io.lunit.exam.domain;
+package com.toy.msjo.board.domain;
 
-import io.lunit.exam.dto.Analysis;
-import io.lunit.exam.dto.Grid;
-import io.lunit.exam.repository.AccountRepository;
-import io.lunit.exam.repository.HistoryRepository;
-import io.lunit.exam.repository.SlideRepository;
+import com.toy.msjo.board.dto.Analysis;
+import com.toy.msjo.board.dto.Grid;
+import com.toy.msjo.board.repository.AccountRepository;
+import com.toy.msjo.board.repository.HistoryRepository;
+import com.toy.msjo.board.repository.SlideRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import javax.persistence.Access;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest

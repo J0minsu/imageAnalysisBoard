@@ -1,7 +1,7 @@
-package io.lunit.exam.repository;
+package com.toy.msjo.board.repository;
 
-import io.lunit.exam.domain.History;
-import io.lunit.exam.domain.mapping.ForSearchHistoryMapping;
+import com.toy.msjo.board.domain.History;
+import com.toy.msjo.board.domain.mapping.ForSearchHistoryMapping;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

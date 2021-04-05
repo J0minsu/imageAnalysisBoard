@@ -1,6 +1,6 @@
-package io.lunit.exam.repository;
+package com.toy.msjo.board.repository;
 
-import io.lunit.exam.domain.mapping.ForSearchSlideMapping;
+import com.toy.msjo.board.domain.mapping.ForSearchSlideMapping;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

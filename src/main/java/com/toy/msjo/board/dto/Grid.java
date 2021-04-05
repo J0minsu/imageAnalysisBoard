@@ -1,4 +1,4 @@
-package io.lunit.exam.dto;
+package com.toy.msjo.board.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

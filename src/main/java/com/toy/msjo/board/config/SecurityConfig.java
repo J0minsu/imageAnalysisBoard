@@ -1,4 +1,4 @@
-package io.lunit.exam.config;
+package com.toy.msjo.board.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

@@ -1,11 +1,10 @@
-package io.lunit.exam.controller;
+package com.toy.msjo.board.controller;
 
 
-import io.lunit.exam.domain.Account;
-import io.lunit.exam.domain.Slide;
-import io.lunit.exam.domain.mapping.ForSearchSlideMapping;
-import io.lunit.exam.service.SlideService;
-import org.apache.tomcat.util.http.fileupload.IOUtils;
+import com.toy.msjo.board.domain.Account;
+import com.toy.msjo.board.domain.Slide;
+import com.toy.msjo.board.domain.mapping.ForSearchSlideMapping;
+import com.toy.msjo.board.service.SlideService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

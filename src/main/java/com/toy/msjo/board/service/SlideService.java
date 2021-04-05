@@ -1,8 +1,8 @@
-package io.lunit.exam.service;
+package com.toy.msjo.board.service;
 
-import io.lunit.exam.domain.Account;
-import io.lunit.exam.domain.Slide;
-import io.lunit.exam.domain.mapping.ForSearchSlideMapping;
+import com.toy.msjo.board.domain.Account;
+import com.toy.msjo.board.domain.Slide;
+import com.toy.msjo.board.domain.mapping.ForSearchSlideMapping;
 
 import java.util.ArrayList;
 

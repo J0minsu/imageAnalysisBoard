@@ -1,7 +1,7 @@
-package io.lunit.exam.interceptor;
+package com.toy.msjo.board.interceptor;
 
 
-import io.lunit.exam.domain.Account;
+import com.toy.msjo.board.domain.Account;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

@@ -1,9 +1,8 @@
-package io.lunit.exam.service;
+package com.toy.msjo.board.service;
 
-import io.lunit.exam.domain.History;
-import io.lunit.exam.domain.mapping.ForSearchHistoryMapping;
+import com.toy.msjo.board.domain.History;
+import com.toy.msjo.board.domain.mapping.ForSearchHistoryMapping;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 

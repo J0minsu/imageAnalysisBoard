@@ -1,9 +1,8 @@
-package io.lunit.exam.service.impl;
+package com.toy.msjo.board.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.lunit.exam.domain.Account;
-import io.lunit.exam.dto.Analysis;
+import com.toy.msjo.board.dto.Analysis;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;

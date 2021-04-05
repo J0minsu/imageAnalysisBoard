@@ -1,6 +1,6 @@
-package io.lunit.exam.domain.mapping;
+package com.toy.msjo.board.domain.mapping;
 
-import io.lunit.exam.domain.Slide;
+import com.toy.msjo.board.domain.Slide;
 
 public interface ForSearchHistoryMapping {
     int getId();
