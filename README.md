@@ -3,6 +3,9 @@
 ##  Program Structure
 ![structure](https://github.com/J0minsu/Lunit_Test/blob/master/images/structure.png?raw=true)
 
+##  DB Modeling
+![dbModel](https://github.com/J0minsu/Lunit_Test/blob/master/images/DB_Structure.png?raw=true)
+
 ### Technology set
 |TechNical Name|Value|
 |:---:|:---:|
